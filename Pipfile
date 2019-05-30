@@ -6,6 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+numpy = "*"
+opencv-python = "==3.4.2.17"
+opencv-contrib-python = "==3.4.2.17"
 
 [requires]
 python_version = "3.7"
