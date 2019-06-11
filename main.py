@@ -72,7 +72,7 @@ def constrain(selected_points):
 
     # change_brightness(result)
 
-def minimizer(g, LM_alpha =1, LM_lambda = 0.2, LM_epsilon = 0.0001):
+def minimizer(g, W, LM_alpha =1, LM_lambda = 0.2, LM_epsilon = 0.0001):
     # g = target exposure value
 
     # log-luminance channel
@@ -101,14 +101,14 @@ def minimizer(g, LM_alpha =1, LM_lambda = 0.2, LM_epsilon = 0.0001):
     dx = dx.reshape((dx.size, 1))
 
     # Build A
-    A = np.spdiags([dx, dy], [-r, -1], n, n);
+    A = diags([dx, dy], [-r, -1], n, n)
     A = diags([dx, dy], [-r,-1], shape= (n,n)).toarray()
     A = A + A.T
 
     g00 = np.pad(dx, r, 'constant')
-    g01 = padarray(dy, 1, 'constant')
-    D = W.reshape(r * c,1) - (g00 + dx + g01 + dy)
-    A = A + np.spdiags(D, 0, n, n);
+    g01 = np.pad(dy, 1, 'constant')
+    D = np.reshape(constraint_mask, (r * c,1)) - (g00 + dx + g01 + dy)
+    A = A + diags(D, 0, n, n)
 
     result, L = cv2.solve(A, b, flags = cv2.DECOMP_SVD)
 
@@ -124,7 +124,6 @@ def on_trackbar(val):
             for c in range(img_rgb.shape[2]):
                 new_image[y, x, c] = np.clip(alpha * img_output[y, x, c] + beta, 0, 255)
     cv2.imshow('output', new_image)
-
 
 def resize_img(img, scale_pct):
     width = int(img.shape[1] * scale_pct / 100)
