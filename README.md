@@ -2,6 +2,11 @@
 
 As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Lischinski, Farbman, Uyttendaele, Richard Szeliski. This code demonstrates using different brushes to select regions of an image.
 
+### Example
+
+![Alt Text](example.PNG)
+
+
 ## Dependencies
 
 * Python 3.7
