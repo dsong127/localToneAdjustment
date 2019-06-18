@@ -28,6 +28,7 @@ cd into cloned directory. Then:
 * `pip3 install pipenv`
 * `pipenv --python 3.7`
 * `pipenv shell`
+* `pipenv install`
 * `python main.py`  
 
 Note: Installing OpenCV takes a while.
