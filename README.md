@@ -2,13 +2,17 @@
 
 As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Lischinski, Farbman, Uyttendaele, Richard Szeliski. This code demonstrates using different brushes to select regions of an image.
 
-### Example
+## Example
 
-![Alt Text](example.PNG)  
+![Alt Text](example1.PNG)  
 Example of using Lumachrome brush to select the sky region.  
 Luminance threshold: 30  
 Chroma threshold: 10
 
+![Alt Text](example2.PNG)  
+Example of using Lumachrome brush to selecting regions excluding the sky and the water.  
+Luminance threshold: 30  
+Chroma threshold: 10
 
 ## Dependencies
 
