@@ -14,8 +14,8 @@ As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Li
 cd into cloned directory. Then:
 
 * `pip3 install pipenv`
-* `pipenv install` to install dependencies
 * `pipenv shell`
+* `pipenv install` to install dependencies
 * `python main.py`
 
 ## Notes

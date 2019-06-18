@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 from scipy.sparse import diags
 
-luminance_threshold = 30
-chroma_threshold = 5
+luminance_threshold = 20
+chroma_threshold = 10
 scale_percent = 20
 beta = 30
 alpha = 2
@@ -55,20 +55,20 @@ def constrain(selected_points):
     constraint_mask[y,x] = 1
 
     # Regular brush
-    # for y, x in zip(y,x):
-    #     img_rgb[y, x] = (luminance_channel[y, x], 0, 0)
+    for y, x in zip(y,x):
+        img_rgb[y, x] = (luminance_channel[y, x], 0, 0)
 
     # Luminance brush
     for lx, ly in np.ndindex(luminance_channel.shape):
         if np.absolute(luminance_mean - luminance_channel[lx, ly]) < luminance_threshold:
             # Lumachrome brush
-            #if np.sqrt(((a_mean-a_channel[lx,ly]) **2) + ((b_mean-b_channel[lx,ly]) **2)) < chroma_threshold:
+            if np.sqrt(((a_mean-a_channel[lx,ly]) **2) + ((b_mean-b_channel[lx,ly]) **2)) < chroma_threshold:
                 # Showing constrained pixels
-            img_rgb[lx, ly] = (255, 0, 100)
-            img_output[lx,ly] = np.clip(alpha * img_output[lx,ly] + beta,0,255)
+                img_rgb[lx, ly] = (255, 0, 100)
+            # img_output[lx,ly] = np.clip(alpha * img_output[lx,ly] + beta,0,255)
                 # Add constrained pixels from the brush propagation
-            constraint_mask[lx, ly] = 1
-            cv2.imshow('output', img_output)
+                constraint_mask[lx, ly] = 1
+            # cv2.imshow('output', img_output)
 
     # change_brightness(result)
 
@@ -153,8 +153,8 @@ if __name__ == '__main__':
     cv2.namedWindow('ref')
     cv2.setMouseCallback('ref', draw)
 
-    cv2.namedWindow('output')
-    cv2.imshow('output', img_output)
+    # cv2.namedWindow('output')
+    # cv2.imshow('output', img_output)
 
     # cv2.createTrackbar('Brightness', 'itm', 10, 50, on_trackbar)
     # on_trackbar(0)
