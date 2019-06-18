@@ -4,7 +4,10 @@ As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Li
 
 ### Example
 
-![Alt Text](example.PNG)
+![Alt Text](example.PNG)  
+Example of using Lumachrome brush to select the sky region.  
+Luminance threshold: 30  
+Chroma threshold: 10
 
 
 ## Dependencies
