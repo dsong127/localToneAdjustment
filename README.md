@@ -13,7 +13,7 @@ As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Li
 
 cd into cloned directory. Then:
 
-* `pip install` to install dependencies
+* `pipenv install` to install dependencies
 * `pipenv shell`
 * `python main.py`
 
