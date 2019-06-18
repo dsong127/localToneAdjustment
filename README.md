@@ -26,11 +26,13 @@ Chroma threshold: 10
 cd into cloned directory. Then:
 
 * `pip3 install pipenv`
-* `pipenv install` to install dependencies
+* `pipenv --python 3.7`
 * `pipenv shell`
-* `python main.py`
+* `python main.py`  
 
-## Notes
+Note: Installing OpenCV takes a while.
+
+## Limitations
 This program currently supports using basic brush, luminance brush, or lumachrome brush to set constraints to a selected region.  
 Tone mapping is not working as of now.
 
