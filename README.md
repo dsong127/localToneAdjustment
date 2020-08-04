@@ -2,9 +2,10 @@
 
 As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Lischinski, Farbman, Uyttendaele, Richard Szeliski. This code demonstrates using different brushes to select regions of an image.  
 
-**Note:** Tone mapping is not working as of now.
+Tone mapping is not working properly as of now.
 
 ## Example
+**Important:** I just realized the example images shows Trump tower. I firmly believe everyone has the right to have their own view. These pictures are from when I traveled to Chicago, and I thought they would be perfect as examples since they show the sky, buildings, and water. They have absolutely nothing to do with my political views.  
 
 ![Alt Text](example1.PNG)  
 Example of using Lumachrome brush to select the sky region.  
