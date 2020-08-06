@@ -5,7 +5,6 @@ As described in [this paper](https://www.cs.huji.ac.il/~danix/itm/itm.pdf) by Li
 Tone mapping is not working properly as of now.
 
 ## Example
-**Important:** I just realized the example images shows Trump tower. I firmly believe everyone has the right to have their own view. These pictures are from when I traveled to Chicago, and I thought they would be perfect as examples since they show the sky, buildings, and water. They have absolutely nothing to do with my political views.  
 
 ![Alt Text](example1.PNG)  
 Example of using Lumachrome brush to select the sky region.  
@@ -15,7 +14,9 @@ Chroma threshold: 10
 ![Alt Text](example2.PNG)  
 Example of using Lumachrome brush to selecting regions excluding the sky and the water.  
 Luminance threshold: 30  
-Chroma threshold: 10
+Chroma threshold: 10  
+
+  **Note:** Just realized the example image shows Trump Tower. I took this picture when I traveled to Chicago, and while looking through images I thought it would be perfect since it shows the sky, buildings, and water. It has absolutely nothing to do with my political views.  
 
 ## Dependencies
 
