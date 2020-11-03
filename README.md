@@ -16,7 +16,7 @@ Example of using Lumachrome brush to selecting regions excluding the sky and the
 Luminance threshold: 30  
 Chroma threshold: 10  
 
-  **Note:** Just realized the example image shows Trump Tower. I took this picture when I traveled to Chicago, and while looking through images I thought it would be perfect since it shows the sky, buildings, and water. It has absolutely nothing to do with my political views.  
+  **Please note:** This picture has nothing to do with my political views.  
 
 ## Dependencies
 
