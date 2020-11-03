@@ -32,8 +32,6 @@ cd into cloned directory. Then:
 * `source env/bin/activate`
 * `python main.py` 
 
-Note: Installing OpenCV takes a while.
-
 ## Limitations
 This program currently supports using basic brush, luminance brush, or lumachrome brush to set constraints to a selected region.  
 
